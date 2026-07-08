@@ -11,7 +11,7 @@ service OrderService {
   rpc PlaceOrder (OrderRequest) returns (OrderResponse);
   rpc GetOrder (OrderRequest) returns (OrderResponse);
   rpc CancelOrder (OrderRequest) returns (OrderResponse);
-  rpc CancelOrder2 (OrderRequest) returns (OrderResponse);
+  rpc CancelOrder3 (OrderRequest) returns (OrderResponse);
 
 
 
