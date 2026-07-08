@@ -10,6 +10,8 @@ import "common/common.proto";
 service OrderService {
   rpc PlaceOrder (OrderRequest) returns (OrderResponse);
   rpc GetOrder (OrderRequest) returns (OrderResponse);
+  rpc CancelOrder (OrderRequest) returns (OrderResponse);
+
 
 }
 

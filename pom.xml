@@ -6,31 +6,27 @@
 
   <groupId>com.company.grpc</groupId>
   <artifactId>grpc-contracts</artifactId>
-  <version>1.0.0</version>
+  <version>1.1.0</version>
   <packaging>jar</packaging>
 
   <name>grpc-contracts</name>
   <description>Shared gRPC Contract Library for Quarkus Microservices</description>
   <url>https://github.com/Abhishek-PJ2/grpc-contracts</url>
-
+  
+  <properties>
     <maven.compiler.source>21</maven.compiler.source>
     <maven.compiler.target>21</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
   <build>
-    <!--
-      This is the key step: it copies everything under src/main/proto into
-      target/classes (and therefore into the built JAR) preserving the
-      common/ payment/ order/ folder layout. That's what lets Quarkus's
-      scan-for-proto / scan-for-imports find these files inside the JAR
-      when another project depends on this artifact.
-    -->
+    
     <resources>
       <resource>
         <directory>src/main/proto</directory>
       </resource>
     </resources>
+
   </build>
 
 
