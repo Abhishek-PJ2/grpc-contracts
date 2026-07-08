@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package company.grpc.order;
+
+option java_package = "com.company.grpc.order";
+option java_multiple_files = true;
+
+import "common/common.proto";
+
+service OrderService {
+  rpc PlaceOrder (OrderRequest) returns (OrderResponse);
+  rpc GetOrder (OrderRequest) returns (OrderResponse);
+
+}
+
+message OrderRequest {
+  string customer_id = 1;
+  company.grpc.common.Money amount = 2;
+}
+
+message OrderResponse {
+  string order_id = 1;
+  string status = 2;
+}
